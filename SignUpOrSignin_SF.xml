@@ -26,6 +26,10 @@
         <OutputClaim ClaimTypeReferenceId="displayName" PartnerClaimType="name"/>
         <OutputClaim ClaimTypeReferenceId="objectId" PartnerClaimType="sub" />
         <OutputClaim ClaimTypeReferenceId="tenantId" AlwaysUseDefaultValue="true" DefaultValue="{Policy:TenantObjectId}" />
+        <OutputClaim ClaimTypeReferenceId="extension_HasSalesforceAccount" PartnerClaimType="extension_HasSalesforceAccount" />
+        <OutputClaim ClaimTypeReferenceId="extension_HasVerticalPlusAccount" PartnerClaimType="extension_HasVerticalPlusAccount" />
+        <OutputClaim ClaimTypeReferenceId="extension_HasNetXtraAccount" PartnerClaimType="extension_HasNetXtraAccount" />
+        <OutputClaim ClaimTypeReferenceId="extension_isPilotUser" PartnerClaimType="extension_isPilotUser" />
       </OutputClaims>
       <SubjectNamingInfo ClaimType="sub" />
     </TechnicalProfile>
