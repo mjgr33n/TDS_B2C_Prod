@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <TrustFrameworkPolicy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema"
   xmlns="http://schemas.microsoft.com/online/cpim/schemas/2013/06" PolicySchemaVersion="0.3.0.0" TenantId="tdsgroupb2cprod.onmicrosoft.com" PolicyId="B2C_1A_Signup_Signin_Seamless_NX" PublicPolicyUri="http://tdsgroupb2cprod.onmicrosoft.com/B2C_1A_Signup_Signin_Seamless_NX">
@@ -22,6 +22,9 @@
         <OutputClaim ClaimTypeReferenceId="displayName" PartnerClaimType="name"/>
         <OutputClaim ClaimTypeReferenceId="objectId" PartnerClaimType="sub" />
         <OutputClaim ClaimTypeReferenceId="tenantId" AlwaysUseDefaultValue="true" DefaultValue="{Policy:TenantObjectId}" />
+        <OutputClaim ClaimTypeReferenceId="extension_HasSalesforceAccount" PartnerClaimType="extension_HasSalesforceAccount" />
+        <OutputClaim ClaimTypeReferenceId="extension_HasVerticalPlusAccount" PartnerClaimType="extension_HasVerticalPlusAccount" />
+        <OutputClaim ClaimTypeReferenceId="extension_HasNetXtraAccount" PartnerClaimType="extension_HasNetXtraAccount" />
       </OutputClaims>
       <SubjectNamingInfo ClaimType="sub" />
     </TechnicalProfile>
