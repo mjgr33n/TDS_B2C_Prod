@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <TrustFrameworkPolicy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
 	xmlns="http://schemas.microsoft.com/online/cpim/schemas/2013/06" PolicySchemaVersion="0.3.0.0" TenantId="tdsgroupb2cprod.onmicrosoft.com" PolicyId="B2C_1A_TrustFrameworkExtensions_Seamless_NX" PublicPolicyUri="http://tdsgroupb2cprod.onmicrosoft.com/B2C_1A_TrustFrameworkExtensions_Seamless_NX">
@@ -110,6 +110,7 @@
 						<Item Key="AuthenticationType">None</Item>
 						<Item Key="SendClaimsIn">Body</Item>
 						<Item Key="AllowInsecureAuthInProduction">True</Item>
+						<Item Key="DefaultUserMessageIfRequestFailed">"Incorrect email or password. Please try again, or reset it using the 'Forgot Password?' link below."</Item>
 					</Metadata>
 					<InputClaims>
 						<InputClaim ClaimTypeReferenceId="signInName" PartnerClaimType="email" />
