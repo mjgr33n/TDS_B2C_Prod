@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <TrustFrameworkPolicy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema"
   xmlns="http://schemas.microsoft.com/online/cpim/schemas/2013/06" PolicySchemaVersion="0.3.0.0" TenantId="tdsgroupb2cprod.onmicrosoft.com" PolicyId="B2C_1A_TrustFrameworkExtensions" PublicPolicyUri="http://tdsgroupb2cprod.onmicrosoft.com/B2C_1A_TrustFrameworkExtensions">
@@ -16,12 +16,29 @@
         <DataType>boolean</DataType>
         <AdminHelpText>Whether the user has selected Forgot your Password</AdminHelpText>
       </ClaimType>
+
+      <ClaimType Id="extension_HasSalesforceAccount">
+        <DisplayName>HasSalesforceAccount</DisplayName>
+        <DataType>boolean</DataType>
+        <UserHelpText>Indicates if user has a Salesforce account</UserHelpText>
+      </ClaimType>
+
+      <ClaimType Id="extension_HasVerticalPlusAccount">
+        <DisplayName>HasVerticalPlusAccount</DisplayName>
+        <DataType>boolean</DataType>
+        <UserHelpText>Indicates if user has a VerticalPlus account</UserHelpText>
+      </ClaimType>
+
+      <ClaimType Id="extension_HasNetXtraAccount">
+        <DisplayName>HasNetXtraAccount</DisplayName>
+        <DataType>boolean</DataType>
+        <UserHelpText>Indicates if user has a NetXtra account</UserHelpText>
+      </ClaimType>
     </ClaimsSchema>
 
   </BuildingBlocks>
 
   <ClaimsProviders>
-
     <ClaimsProvider>
       <DisplayName>Local Account</DisplayName>
       <TechnicalProfiles>
@@ -73,11 +90,13 @@
             <OutputClaim ClaimTypeReferenceId="displayName" />
             <OutputClaim ClaimTypeReferenceId="givenName" />
             <OutputClaim ClaimTypeReferenceId="signInNames.emailAddress" />
+            <OutputClaim ClaimTypeReferenceId="extension_HasSalesforceAccount" />
+            <OutputClaim ClaimTypeReferenceId="extension_HasVerticalPlusAccount" />
+            <OutputClaim ClaimTypeReferenceId="extension_HasNetXtraAccount" />
           </OutputClaims>
         </TechnicalProfile>
       </TechnicalProfiles>
     </ClaimsProvider>
-
   </ClaimsProviders>
 
   <UserJourneys>
